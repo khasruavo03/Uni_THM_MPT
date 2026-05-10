@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/khush/Documents/SoSe26/MPT/Praktikum3/_build/My_Project/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.36\\bin\\xc8-cc.exe -DXPRJ_default=default -D__AVR128DA48__ -c -mcpu=AVR128DA48 -x c -Wl,--gc-sections -O0 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -gdwarf-3 -mno-const-data-in-progmem -o CMakeFiles\\My_Project_default_default_XC8_compile.dir\\C_\\Users\\khush\\Documents\\SoSe26\\MPT\\Praktikum3\\main.c.o -c C:\\Users\\khush\\Documents\\SoSe26\\MPT\\Praktikum3\\main.c",
+  "file": "C:/Users/khush/Documents/SoSe26/MPT/Praktikum3/main.c",
+  "output": "C:/Users/khush/Documents/SoSe26/MPT/Praktikum3/_build/My_Project/default/CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/Documents/SoSe26/MPT/Praktikum3/main.c.o"
+}
+]
