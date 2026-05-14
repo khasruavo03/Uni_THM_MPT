@@ -1,0 +1,4 @@
+C:/Users/khush/MPLABProjects/My_Project2/_build/My_Project/default/CMakeFiles/My_Project_default_default_XC8_compile.dir
+C:/Users/khush/MPLABProjects/My_Project2/_build/My_Project/default/CMakeFiles/My_Project_default_image_XXieOxIW.dir
+C:/Users/khush/MPLABProjects/My_Project2/_build/My_Project/default/CMakeFiles/edit_cache.dir
+C:/Users/khush/MPLABProjects/My_Project2/_build/My_Project/default/CMakeFiles/rebuild_cache.dir

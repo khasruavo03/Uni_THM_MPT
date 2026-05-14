@@ -1,14 +1,34 @@
 /**
  * @file main.c
  * @author khush
+ * @date 2026-05-10
+ * @brief Main function
+ */
+
+
+/*  #include <avr/io.h>
+
+// Aufgabe 3.1
+int main(){
+    PORTD.DIR |= PIN7_bm; // Set pin 7 of PORTD as output
+    PORTD.OUT |= PIN7_bm;
+    // Add your code here and press Ctrl + Shift + B to build
+
+    return 0;
+}  */
+
+ /**
+ * @file main.c
+ * @author khush
  * @date 2026-05-07
  * @brief Main function
  */
 #include <avr/io.h>
 
 // Aufgabe 3.2
-#define LED1_PIN PIN7_bm
+#define LED_PIN PIN7_bm
 #define LED2_PIN PIN6_bm
+#define LED2 PIN6_bm
 
 // Blinkgeschwindigkeit
 #define DELAY_COUNT 50000UL
@@ -38,7 +58,7 @@ int main()
 {
     // LED Konfigurieren
     // PD7 als Ausgang setzen
-    PORTD.DIR |= LED1 | LED2;
+    PORTD.DIR |= LED_PIN | LED2_PIN;
 
     while (1)
     {
@@ -52,15 +72,15 @@ int main()
 
         // Erweiterung des Programms
 
-        // Zwei LEDs abwechselend blinken
+        // Zwei LEDs abwechselnd blinken
 
         // LED1 an, LED2 aus
-        PORTD.OUTSET = LED1;
-        PORTD.OUTCLR = LED2;
+        PORTD.OUTSET = LED_PIN;
+        PORTD.OUTCLR = LED2_PIN;
         delay();
         // LED1 aus, LED2 an
-        PORTD.OUTCLR = LED1;
-        PORTD.OUTSET = LED2;
+        PORTD.OUTCLR = LED_PIN;
+        PORTD.OUTSET = LED2_PIN;
         delay();
     }
 

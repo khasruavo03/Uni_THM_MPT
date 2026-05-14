@@ -1,0 +1,15 @@
+# ninja log v7
+38	1324	8001516451310002	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+1325	1803	8001516464176517	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
+24	457	8001522276018116	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+458	636	8001522280371948	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
+9	514	8001527356636805	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+515	678	8001527361697230	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
+10	698	8001545576340847	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+699	968	8001545583233599	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
+50	734	8001546285478402	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+735	985	8001546292324642	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
+53	614	8001546597365982	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+616	846	8001546602991926	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
+53	526	8001548349934430	CMakeFiles/My_Project_default_default_XC8_compile.dir/C_/Users/khush/MPLABProjects/My_Project2/main.c.o	a4b723c959b4b090
+527	691	8001548354682526	C:/Users/khush/MPLABProjects/My_Project2/out/My_Project/default.elf	795eb6b2d359b655
