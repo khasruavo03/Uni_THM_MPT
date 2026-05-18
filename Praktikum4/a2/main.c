@@ -57,7 +57,7 @@ int main(void)
 	lcd_backlight(true);
 	lcd_clear();
 	
-	// Platz für "1000"
+	// Platz fÃ¼r "1000"
 	char text[6];
 
 	while (1)
