@@ -1,0 +1,348 @@
+
+Praktikum7.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000066  00804000  00000220  00000294  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000220  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000002fa  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000032c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  0000036c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000348c  00000000  00000000  000003b4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00002e7c  00000000  00000000  00003840  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000403  00000000  00000000  000066bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000cc  00000000  00000000  00006ac0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000018a8  00000000  00000000  00006b8c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000014f  00000000  00000000  00008434  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00008583  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 7a 00 	jmp	0xf4	; 0xf4 <__ctors_end>
+   4:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+   8:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+   c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  10:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  14:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  18:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  1c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  20:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  24:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  28:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  2c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  30:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  34:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  38:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  3c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  40:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  44:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  48:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  4c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  50:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  54:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  58:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  5c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  60:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  64:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  68:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  6c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  70:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  74:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  78:	0c 94 c0 00 	jmp	0x180	; 0x180 <__vector_30>
+  7c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  80:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  84:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  88:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  8c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  90:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  94:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  98:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  9c:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  a0:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  a4:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  a8:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  ac:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  b0:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  b4:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  b8:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  bc:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  c0:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  c4:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  c8:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  cc:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  d0:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  d4:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  d8:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  dc:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  e0:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  e4:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  e8:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  ec:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+  f0:	0c 94 99 00 	jmp	0x132	; 0x132 <__bad_interrupt>
+
+000000f4 <__ctors_end>:
+  f4:	11 24       	eor	r1, r1
+  f6:	1f be       	out	0x3f, r1	; 63
+  f8:	cf ef       	ldi	r28, 0xFF	; 255
+  fa:	cd bf       	out	0x3d, r28	; 61
+  fc:	df e7       	ldi	r29, 0x7F	; 127
+  fe:	de bf       	out	0x3e, r29	; 62
+
+00000100 <__do_copy_data>:
+ 100:	10 e4       	ldi	r17, 0x40	; 64
+ 102:	a0 e0       	ldi	r26, 0x00	; 0
+ 104:	b0 e4       	ldi	r27, 0x40	; 64
+ 106:	e0 e2       	ldi	r30, 0x20	; 32
+ 108:	f2 e0       	ldi	r31, 0x02	; 2
+ 10a:	00 e0       	ldi	r16, 0x00	; 0
+ 10c:	0b bf       	out	0x3b, r16	; 59
+ 10e:	02 c0       	rjmp	.+4      	; 0x114 <__do_copy_data+0x14>
+ 110:	07 90       	elpm	r0, Z+
+ 112:	0d 92       	st	X+, r0
+ 114:	a6 36       	cpi	r26, 0x66	; 102
+ 116:	b1 07       	cpc	r27, r17
+ 118:	d9 f7       	brne	.-10     	; 0x110 <__do_copy_data+0x10>
+
+0000011a <__do_clear_bss>:
+ 11a:	20 e4       	ldi	r18, 0x40	; 64
+ 11c:	a6 e6       	ldi	r26, 0x66	; 102
+ 11e:	b0 e4       	ldi	r27, 0x40	; 64
+ 120:	01 c0       	rjmp	.+2      	; 0x124 <.do_clear_bss_start>
+
+00000122 <.do_clear_bss_loop>:
+ 122:	1d 92       	st	X+, r1
+
+00000124 <.do_clear_bss_start>:
+ 124:	a6 36       	cpi	r26, 0x66	; 102
+ 126:	b2 07       	cpc	r27, r18
+ 128:	e1 f7       	brne	.-8      	; 0x122 <.do_clear_bss_loop>
+ 12a:	0e 94 04 01 	call	0x208	; 0x208 <main>
+ 12e:	0c 94 0e 01 	jmp	0x21c	; 0x21c <_exit>
+
+00000132 <__bad_interrupt>:
+ 132:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000136 <usart0_init>:
+#define BAUD_RATE 9600
+
+void usart0_init(void) {
+	uint16_t baud = (uint16_t) (64.0 * F_CPU) / (16.0 * BAUD_RATE);
+	
+	USART0.BAUD = baud;
+ 136:	e0 e0       	ldi	r30, 0x00	; 0
+ 138:	f8 e0       	ldi	r31, 0x08	; 8
+ 13a:	10 86       	std	Z+8, r1	; 0x08
+ 13c:	11 86       	std	Z+9, r1	; 0x09
+	USART0.CTRLB = USART_TXEN_bm | USART_RXEN_bm;
+ 13e:	80 ec       	ldi	r24, 0xC0	; 192
+ 140:	86 83       	std	Z+6, r24	; 0x06
+ 142:	08 95       	ret
+
+00000144 <usart0_sendChar>:
+}
+
+void usart0_sendChar(char c)
+{
+	while (!(USART0.STATUS & USART_DREIF_bm));
+ 144:	90 91 04 08 	lds	r25, 0x0804	; 0x800804 <__TEXT_REGION_LENGTH__+0x7e0804>
+ 148:	95 ff       	sbrs	r25, 5
+ 14a:	fc cf       	rjmp	.-8      	; 0x144 <usart0_sendChar>
+	USART0.TXDATAL = c;
+ 14c:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7e0802>
+ 150:	08 95       	ret
+
+00000152 <usart0_sendString>:
+}
+
+void usart0_sendString(char *str)
+{
+ 152:	cf 93       	push	r28
+ 154:	df 93       	push	r29
+ 156:	ec 01       	movw	r28, r24
+	while(*str) {
+ 158:	03 c0       	rjmp	.+6      	; 0x160 <usart0_sendString+0xe>
+		usart0_sendChar(*str++);
+ 15a:	21 96       	adiw	r28, 0x01	; 1
+ 15c:	0e 94 a2 00 	call	0x144	; 0x144 <usart0_sendChar>
+	USART0.TXDATAL = c;
+}
+
+void usart0_sendString(char *str)
+{
+	while(*str) {
+ 160:	88 81       	ld	r24, Y
+ 162:	81 11       	cpse	r24, r1
+ 164:	fa cf       	rjmp	.-12     	; 0x15a <usart0_sendString+0x8>
+		usart0_sendChar(*str++);
+	}
+}
+ 166:	df 91       	pop	r29
+ 168:	cf 91       	pop	r28
+ 16a:	08 95       	ret
+
+0000016c <buttons_init>:
+
+void buttons_init(void)
+{
+	PORTC.DIRCLR =
+ 16c:	e0 e4       	ldi	r30, 0x40	; 64
+ 16e:	f4 e0       	ldi	r31, 0x04	; 4
+ 170:	80 ef       	ldi	r24, 0xF0	; 240
+ 172:	82 83       	std	Z+2, r24	; 0x02
+	PIN4_bm |
+	PIN5_bm |
+	PIN6_bm |
+	PIN7_bm;
+
+	PORTC.PIN4CTRL =
+ 174:	8b e0       	ldi	r24, 0x0B	; 11
+ 176:	84 8b       	std	Z+20, r24	; 0x14
+	PORT_PULLUPEN_bm |
+	PORT_ISC_FALLING_gc;
+
+	PORTC.PIN5CTRL =
+ 178:	85 8b       	std	Z+21, r24	; 0x15
+	PORT_PULLUPEN_bm |
+	PORT_ISC_FALLING_gc;
+
+	PORTC.PIN6CTRL =
+ 17a:	86 8b       	std	Z+22, r24	; 0x16
+	PORT_PULLUPEN_bm |
+	PORT_ISC_FALLING_gc;
+
+	PORTC.PIN7CTRL =
+ 17c:	87 8b       	std	Z+23, r24	; 0x17
+ 17e:	08 95       	ret
+
+00000180 <__vector_30>:
+	PORT_PULLUPEN_bm |
+	PORT_ISC_FALLING_gc;
+}
+
+ISR(PORTC_PORT_vect)
+{
+ 180:	1f 92       	push	r1
+ 182:	0f 92       	push	r0
+ 184:	0f b6       	in	r0, 0x3f	; 63
+ 186:	0f 92       	push	r0
+ 188:	11 24       	eor	r1, r1
+ 18a:	0b b6       	in	r0, 0x3b	; 59
+ 18c:	0f 92       	push	r0
+ 18e:	2f 93       	push	r18
+ 190:	3f 93       	push	r19
+ 192:	4f 93       	push	r20
+ 194:	5f 93       	push	r21
+ 196:	6f 93       	push	r22
+ 198:	7f 93       	push	r23
+ 19a:	8f 93       	push	r24
+ 19c:	9f 93       	push	r25
+ 19e:	af 93       	push	r26
+ 1a0:	bf 93       	push	r27
+ 1a2:	cf 93       	push	r28
+ 1a4:	ef 93       	push	r30
+ 1a6:	ff 93       	push	r31
+	uint8_t flags = PORTC.INTFLAGS;
+ 1a8:	c0 91 49 04 	lds	r28, 0x0449	; 0x800449 <__TEXT_REGION_LENGTH__+0x7e0449>
+
+	if(flags & PIN4_bm)
+ 1ac:	c4 ff       	sbrs	r28, 4
+ 1ae:	04 c0       	rjmp	.+8      	; 0x1b8 <__vector_30+0x38>
+	{
+		usart0_sendString("Button C4 gedrückt\r\n");
+ 1b0:	80 e0       	ldi	r24, 0x00	; 0
+ 1b2:	90 e4       	ldi	r25, 0x40	; 64
+ 1b4:	0e 94 a9 00 	call	0x152	; 0x152 <usart0_sendString>
+	}
+
+	if(flags & PIN5_bm)
+ 1b8:	c5 ff       	sbrs	r28, 5
+ 1ba:	04 c0       	rjmp	.+8      	; 0x1c4 <__vector_30+0x44>
+	{
+		usart0_sendString("Button C5 gedrückt\r\n");
+ 1bc:	85 e1       	ldi	r24, 0x15	; 21
+ 1be:	90 e4       	ldi	r25, 0x40	; 64
+ 1c0:	0e 94 a9 00 	call	0x152	; 0x152 <usart0_sendString>
+	}
+
+	if(flags & PIN6_bm)
+ 1c4:	c6 ff       	sbrs	r28, 6
+ 1c6:	04 c0       	rjmp	.+8      	; 0x1d0 <__vector_30+0x50>
+	{
+		usart0_sendString("Button C6 gedrückt\r\n");
+ 1c8:	8a e2       	ldi	r24, 0x2A	; 42
+ 1ca:	90 e4       	ldi	r25, 0x40	; 64
+ 1cc:	0e 94 a9 00 	call	0x152	; 0x152 <usart0_sendString>
+	}
+
+	if(flags & PIN7_bm)
+ 1d0:	cc 23       	and	r28, r28
+ 1d2:	24 f4       	brge	.+8      	; 0x1dc <__vector_30+0x5c>
+	{
+		usart0_sendString("Button C7 gedrückt\r\n");
+ 1d4:	8f e3       	ldi	r24, 0x3F	; 63
+ 1d6:	90 e4       	ldi	r25, 0x40	; 64
+ 1d8:	0e 94 a9 00 	call	0x152	; 0x152 <usart0_sendString>
+	}
+
+	PORTC.INTFLAGS = flags;
+ 1dc:	c0 93 49 04 	sts	0x0449, r28	; 0x800449 <__TEXT_REGION_LENGTH__+0x7e0449>
+}
+ 1e0:	ff 91       	pop	r31
+ 1e2:	ef 91       	pop	r30
+ 1e4:	cf 91       	pop	r28
+ 1e6:	bf 91       	pop	r27
+ 1e8:	af 91       	pop	r26
+ 1ea:	9f 91       	pop	r25
+ 1ec:	8f 91       	pop	r24
+ 1ee:	7f 91       	pop	r23
+ 1f0:	6f 91       	pop	r22
+ 1f2:	5f 91       	pop	r21
+ 1f4:	4f 91       	pop	r20
+ 1f6:	3f 91       	pop	r19
+ 1f8:	2f 91       	pop	r18
+ 1fa:	0f 90       	pop	r0
+ 1fc:	0b be       	out	0x3b, r0	; 59
+ 1fe:	0f 90       	pop	r0
+ 200:	0f be       	out	0x3f, r0	; 63
+ 202:	0f 90       	pop	r0
+ 204:	1f 90       	pop	r1
+ 206:	18 95       	reti
+
+00000208 <main>:
+
+
+int main(void)
+{
+     usart0_init();
+ 208:	0e 94 9b 00 	call	0x136	; 0x136 <usart0_init>
+
+     buttons_init();
+ 20c:	0e 94 b6 00 	call	0x16c	; 0x16c <buttons_init>
+
+     sei();
+ 210:	78 94       	sei
+
+     usart0_sendString("USART gestartet\r\n");
+ 212:	84 e5       	ldi	r24, 0x54	; 84
+ 214:	90 e4       	ldi	r25, 0x40	; 64
+ 216:	0e 94 a9 00 	call	0x152	; 0x152 <usart0_sendString>
+ 21a:	ff cf       	rjmp	.-2      	; 0x21a <main+0x12>
+
+0000021c <_exit>:
+ 21c:	f8 94       	cli
+
+0000021e <__stop_program>:
+ 21e:	ff cf       	rjmp	.-2      	; 0x21e <__stop_program>
