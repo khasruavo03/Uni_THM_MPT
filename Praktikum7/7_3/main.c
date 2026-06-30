@@ -63,22 +63,22 @@ ISR(PORTC_PORT_vect)
 
 	if(flags & PIN4_bm)
 	{
-		usart0_sendString("Button C4 gedrückt\r\n");
+		usart0_sendString("Button C4 gedrÃ¼ckt\r\n");
 	}
 
 	if(flags & PIN5_bm)
 	{
-		usart0_sendString("Button C5 gedrückt\r\n");
+		usart0_sendString("Button C5 gedrÃ¼ckt\r\n");
 	}
 
 	if(flags & PIN6_bm)
 	{
-		usart0_sendString("Button C6 gedrückt\r\n");
+		usart0_sendString("Button C6 gedrÃ¼ckt\r\n");
 	}
 
 	if(flags & PIN7_bm)
 	{
-		usart0_sendString("Button C7 gedrückt\r\n");
+		usart0_sendString("Button C7 gedrÃ¼ckt\r\n");
 	}
 
 	PORTC.INTFLAGS = flags;

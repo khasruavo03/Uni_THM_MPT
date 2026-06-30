@@ -11,77 +11,86 @@
 
 #include <avr/interrupt.h>
 
-#define SERVO_LEFT    100   // 1.0 ms
-#define SERVO_CENTER  150   // 1.5 ms
-#define SERVO_RIGHT   200   // 2.0 ms
+// PWM als Software-PWM per Timer erzeugt
 
-volatile uint16_t counter = 0;
+#define SERVO_LEFT    250   // 1.0 ms
+#define SERVO_CENTER  375   // 1.5 ms
+#define SERVO_RIGHT   500   // 2.0 ms
+
+#define SERVO_PERIOD 5000 //20ms Periode
+
+// Fehler, das Software-Zähler innerhalb eines Interrupts: volatile uint16_t counter = 0;
 volatile uint16_t pulseWidth = 150;
+volatile int16_t direction = 1;
+
+void tca_config(void) {
+	PORTF.DIRSET = PIN4_bm;
+	
+	TCA0.SINGLE.PER = SERVO_PERIOD;
+	TCA0.SINGLE.CMP0 = pulseWidth;
+
+	TCA0.SINGLE.INTCTRL = TCA_SINGLE_OVF_bm | TCA_SINGLE_CMP0_bm;
+
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV16_gc | TCA_SINGLE_ENABLE_bm;
+}
 
 ISR(TCA0_OVF_vect) {
-	TCA0.INTFLAGS = TCA0_OVF_vect;
-	// PORTF.OUTCLR = PIN4_bm;
-	
-	counter++;
-	
-	if (counter == 1) {
-		PORTF.OUTSET = PIN4_bm;
+	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;
+	PORTF.OUTSET = PIN4_bm;
+	TCA0.SINGLE.CMP0 = pulseWidth;
+	pulseWidth += direction;
+	if(pulseWidth >= SERVO_RIGHT) {
+		direction = -1;
 	}
-	
-	if (counter == pulseWidth) {
-		PORTF.OUTCLR = PIN4_bm;
+	if(pulseWidth <= SERVO_LEFT) {
+		direction = 1;
 	}
-	
-	if(counter >= 2000) {
-		counter = 0;
-	}
+	/* Fehler 
+	*
+	* counter++;
+	*
+	* if (counter == 1) {
+	* 	PORTF.OUTSET = PIN4_bm;
+	* }
+	*
+	* if (counter == pulseWidth) {
+	* 	PORTF.OUTCLR = PIN4_bm;
+	* }
+	*
+	* if(counter >= 2000) {
+	* 	counter = 0;
+	* } */
+}
+
+ISR(TCA0_CMP0_vect)
+{
+	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_CMP0_bm;
+	PORTF.OUTCLR = PIN4_bm;
 }
 
 int main(void)
 {
     /* Replace with your application code */
-	PORTF.DIRSET = PIN4_bm;
-	
-	// TCA0.SINGLE.CCMP = 40;
-	// TCA0.SINGLE.CTRLB = TCA_CNTMODE_INT_gc;
-	
-	// TCA0.INTCTRL = TCA_CAPT_bm;
-	TCA0.SINGLE.PER = 20000;
-	// TCA Datasheet
-	// TCA Overflow -> Verwendung um die Richtungslogik ISR (Fallunterschiedung zum Situationen 1ms, 1.5ms, 2ms)
-	// Jedes mal schauen ob das Compare-Register welche Richtung
-	// TCA Compare -> Compare-Register zurücksetzen
-	// PWM Intialisiert
-	// Beachten wie Timer konfiguriert ist => Sinvoll Prescaler zu verwenden
-	// Aurechnen wie viel Takt zu verwenden
-	
-	
-	
-	// TCA0.CTRLA = TCA_CLKSEL_DIV1_gc | TCA_ENABLE_bm;
+	tca_config();
 	
 	sei();
-	
-	
 	
 	while(1)
 	{
 		// Fehler!
-		// Über Timer läuft => Overflow-Interrupt
-		// Toggeln ob Signal High oder Low
-		// Bis zur Compare-Register erreicht ist
-		for(uint16_t p = SERVO_LEFT; p <= SERVO_RIGHT; p++)
-		{
-			pulseWidth = p;
-
-			for(volatile uint32_t d = 0; d < 10000; d++);
-		}
-
-		for(int16_t p = SERVO_RIGHT; p >= SERVO_LEFT; p--)
-		{
-			pulseWidth = p;
-
-			for(volatile uint32_t d = 0; d < 10000; d++);
-		}
+		/* for(uint16_t p = SERVO_LEFT; p <= SERVO_RIGHT; p++)
+		* {
+		*	pulseWidth = p;
+		*
+		* for(volatile uint32_t d = 0; d < 10000; d++);
+		* }
+		*
+		* for(int16_t p = SERVO_RIGHT; p >= SERVO_LEFT; p--)
+		* {
+		*
+		* for(volatile uint32_t d = 0; d < 10000; d++);
+		* }
+		*/
 	}
 }
 
